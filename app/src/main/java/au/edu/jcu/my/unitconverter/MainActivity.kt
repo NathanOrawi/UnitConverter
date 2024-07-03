@@ -22,16 +22,27 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
+        // Changes the text of the radio buttons based on the round up switch
+        if (binding.roundUpSwitch.isChecked) {
+            binding.optionCelsiusFahrenheit.text = getString(R.string.fahrenheit_to_celsius)
+            binding.optionDegreeRadians.text = getString(R.string.degrees_to_radians)
+            binding.optionKilometerMiles.text = getString(R.string.miles_to_kilometers)
+        } else {
+            binding.optionCelsiusFahrenheit.text = getString(R.string.celsius_to_fahrenheit)
+            binding.optionDegreeRadians.text = getString(R.string.radians_to_degrees)
+            binding.optionKilometerMiles.text = getString(R.string.kilometers_to_miles)
+        }
+
         // Converts units based on the selected radio button, and the manner of conversion based on the round up switch
         val conversionPercentage: Double = when (binding.conversionOptions.checkedRadioButtonId) {
             // celsius to fahrenheit conversion
-            R.id.option_twenty_percent -> if (binding.roundUpSwitch.isChecked) {
+            R.id.option_celsius_fahrenheit -> if (binding.roundUpSwitch.isChecked) {
                 unitValue * 9 / 5 + 32
             } else {
                 (unitValue - 32) * 5 / 9
             }
             // radians to degrees conversion
-            R.id.option_eighteen_percent -> if (binding.roundUpSwitch.isChecked) {
+            R.id.option_degree_radians -> if (binding.roundUpSwitch.isChecked) {
                 unitValue * (180 / Math.PI)
             } else {
                 unitValue * (Math.PI / 180)

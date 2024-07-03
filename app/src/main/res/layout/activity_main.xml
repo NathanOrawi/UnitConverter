@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,49 +12,42 @@
 
     <EditText
         android:id="@+id/unit_value_to_convert"
-        android:layout_width="273dp"
+        android:layout_width="207dp"
         android:layout_height="57dp"
         android:hint="@string/unit_value_to_convert"
         android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/service_question"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:text="@string/how_was_the_conversion"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf ="@id/unit_value_to_convert"/>
     <RadioGroup
         android:id="@+id/conversion_options"
-        android:checkedButton="@id/option_twenty_percent"
+        android:checkedButton="@id/option_celsius_fahrenheit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/service_question">
+        app:layout_constraintTop_toBottomOf="@id/unit_value_to_convert">
         <RadioButton
-            android:id="@+id/option_twenty_percent"
+            android:id="@+id/option_celsius_fahrenheit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fahrenheit_to_celsius" />
         <RadioButton
-            android:id="@+id/option_eighteen_percent"
+            android:id="@+id/option_degree_radians"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/degrees_to_radians" />
         <RadioButton
-            android:id="@+id/option_fifteen_percent"
+            android:id="@+id/option_kilometer_miles"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/miles_to_kilometers" />
     </RadioGroup>
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/round_up_switch"
         android:checked="true"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:text="@string/round_up_conversion"
+        android:text="@string/invert_conversion"
         app:layout_constraintTop_toBottomOf="@id/conversion_options"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/conversion_options" />

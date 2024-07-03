@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "au.edu.jcu.my.tiptime"
+    namespace = "au.edu.jcu.my.unitconverter"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "au.edu.jcu.my.tiptime"
+        applicationId = "au.edu.jcu.my.unitconverter"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

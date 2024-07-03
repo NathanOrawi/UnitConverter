@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Tip Time</string>
+    <string name="app_name">Unit Converter</string>
     <string name="calculate">Calculate</string>
-    <string name="tip_amount">Tip Amount: %s</string>
-    <string name="okay_15">Okay (15%)</string>
-    <string name="good_18">Good (18%)</string>
-    <string name="amazing_20">Amazing (20%)</string>
-    <string name="how_was_the_service">How was the service?</string>
-    <string name="cost_of_service">Cost of Service</string>
-    <string name="round_up_tip">Round up tip?</string>
+    <string name="conversion_amount">Conversion Amount: %s</string>
+    <string name="miles_to_kilometers">Miles to Kilometer</string>
+    <string name="degrees_to_radians">Degree to Radians</string>
+    <string name="fahrenheit_to_celsius">Fahrenheit to celsius</string>
+    <string name="how_was_the_conversion">How was the conversion?</string>
+    <string name="unit_value_to_convert">Unit Value to Convert</string>
+    <string name="round_up_conversion">Round up conversion?</string>
 </resources>

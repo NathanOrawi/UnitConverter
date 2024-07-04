@@ -12,12 +12,18 @@
 
     <EditText
         android:id="@+id/unit_value_to_convert"
-        android:layout_width="207dp"
-        android:layout_height="57dp"
+        android:layout_width="334dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/unit_value_to_convert"
         android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <RadioGroup
         android:id="@+id/conversion_options"
         android:checkedButton="@id/option_celsius_fahrenheit"
@@ -42,28 +48,41 @@
             android:layout_height="wrap_content"
             android:text="@string/miles_to_kilometers" />
     </RadioGroup>
+
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/round_up_switch"
-        android:checked="true"
         android:layout_width="0dp"
         android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:checked="true"
         android:text="@string/invert_conversion"
-        app:layout_constraintTop_toBottomOf="@id/conversion_options"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/conversion_options" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/conversion_options"
+        app:layout_constraintTop_toBottomOf="@id/conversion_options" />
+
     <Button
         android:id="@+id/calculate_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="@string/calculate"
-        app:layout_constraintTop_toBottomOf="@id/round_up_switch"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/round_up_switch" />
+
     <TextView
         android:id="@+id/conversion_amount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="Conversion Amount: $10.00"
-        app:layout_constraintTop_toBottomOf="@id/calculate_button"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_width="225dp"
+        android:layout_height="124dp"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculate_button"
+        app:layout_constraintVertical_bias="0.068"
+        tools:text="Conversion Amount: 33.00" />
 </androidx.constraintlayout.widget.ConstraintLayout>

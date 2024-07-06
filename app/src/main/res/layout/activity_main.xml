@@ -14,18 +14,21 @@
 
     <EditText
         android:id="@+id/value_to_convert"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:autofillHints=""
         android:hint="@string/value_to_convert"
         android:inputType="numberDecimal"
         android:textAlignment="center"
+        android:textColor="#918C8C"
+        android:textColorHint="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Value to Convert" />
 
     <RadioGroup
         android:id="@+id/conversion_options"
@@ -57,26 +60,26 @@
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/round_up_switch"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="4dp"
         android:checked="true"
         android:text="@string/invert_conversion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/conversion_options"
         app:layout_constraintTop_toBottomOf="@id/conversion_options" />
 
     <Button
         android:id="@+id/calculate_button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:text="@string/calculate"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/round_up_switch"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/round_up_switch" />
+        app:layout_constraintTop_toBottomOf="@+id/conversion_options" />
 
     <TextView
         android:id="@+id/conversion_value"

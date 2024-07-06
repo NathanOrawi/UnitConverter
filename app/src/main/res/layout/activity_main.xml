@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:rotation="-360"
+    android:rotationX="-360"
+    android:rotationY="-360"
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/unit_value_to_convert"
-        android:layout_width="334dp"
-        android:layout_height="140dp"
+        android:id="@+id/value_to_convert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:autofillHints=""
-        android:hint="@string/unit_value_to_convert"
+        android:hint="@string/value_to_convert"
         android:inputType="numberDecimal"
         android:textAlignment="center"
-        android:textSize="34sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,22 +29,25 @@
 
     <RadioGroup
         android:id="@+id/conversion_options"
-        android:checkedButton="@id/option_celsius_fahrenheit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:checkedButton="@id/option_celsius_fahrenheit"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/unit_value_to_convert">
+        app:layout_constraintTop_toBottomOf="@id/value_to_convert">
+
         <RadioButton
             android:id="@+id/option_celsius_fahrenheit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fahrenheit_to_celsius" />
+
         <RadioButton
             android:id="@+id/option_degree_radians"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/degrees_to_radians" />
+
         <RadioButton
             android:id="@+id/option_kilometer_miles"
             android:layout_width="wrap_content"
@@ -52,8 +57,8 @@
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/round_up_switch"
-        android:layout_width="385dp"
-        android:layout_height="71dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:checked="true"
         android:text="@string/invert_conversion"
@@ -64,7 +69,7 @@
 
     <Button
         android:id="@+id/calculate_button"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/calculate"
@@ -75,12 +80,10 @@
 
     <TextView
         android:id="@+id/conversion_value"
-        android:layout_width="341dp"
-        android:layout_height="134dp"
-        android:paddingTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textColor="#37383A"
-        android:textSize="34sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

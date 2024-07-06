@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
      */
     private fun calculateConversion() {
         // Checks if the text field is empty
-        val stringInTextField = binding.unitValueToConvert.text.toString()
+        val stringInTextField = binding.valueToConvert.text.toString()
         // If the text field is empty, the conversion amount is set to empty
         val unitValue = stringInTextField.toDoubleOrNull()
         if (unitValue == null) {
